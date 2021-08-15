@@ -1,0 +1,363 @@
+:root {
+    /*FONTS*/
+    --TitleFontFamily: 'Oswald', sans-serif;
+    --ParagraphFontFamily: 'Nunito', sans-serif;
+    --PFontSize: 1.6rem;
+    --H1FontSize: 6rem;
+    --H2FontSize: 2rem;
+    --H3FontSize: 1.8rem;
+    /*COLORES*/
+    --Color1: #ffffff;
+    --Color2: #262c3a;
+    --Color3: #1a1e29;
+    --Color4: #000000;
+    --Color5: #97c6d3;
+    --Color6: #ebd7ce;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*border: 0.1rem solid red;*/
+}
+
+html {
+    /* 1rem = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--Color1);
+    font-size: var(--PFontSize);
+    font-family: var(--ParagraphFontFamily);
+}
+
+h1, h2, h3 {
+    font-family: var(--TitleFontFamily);
+}
+
+h1 {
+    font-size: var(--H1FontSize);
+}
+
+h2 {
+    font-size: var(--H2FontSize);
+}
+
+h3 {
+    font-size: var(--H3FontSize);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .3s ease-in-out;
+}
+
+a:hover {
+    color: var(--Color6);
+}
+
+/* --------------------- */
+/* --------------------- */
+/* --------------------- */
+
+#header {
+    background-color: #00000000;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0rem;
+    transition: all .3s ease-in-out;
+}
+
+#header.hfe-sticky {
+    position: fixed;
+    padding: 0rem 0rem;
+    background-color: #1a1e29f5;
+    backdrop-filter: blur(.2rem);
+    box-shadow: 0rem 1rem 1.3rem -.7rem #0000001e, .5rem .5rem 1.5rem .5rem #0000004f;
+}
+
+#header__wrapper {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    max-width: 120.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGOTIPO */
+
+/* .header__logoContainer {} */
+
+/* .header__logoText {} */
+
+.header__logoLink {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+/* NAVEGACIÓN */
+
+/* .header__navContainer {} */
+
+/* .header__navBox {} */
+
+.header__navItem {
+    padding: 1rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.header__navItem--last {
+    border: 0.2rem solid var(--Color6);
+    border-radius: 0.5rem;
+    color: var(--Color6);
+    margin-left: 1rem;
+}
+
+.header__navItem--last:hover {
+    background-color: var(--Color6);
+    color: var(--Color4);
+}
+
+/* --------------------- */
+/* --------------------- */
+/* --------------------- */
+
+/* #main {} */
+
+#sectionHero__wrapper {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    max-width: 120.4rem;
+    height: 100%;
+}
+
+/* SECCIÓN HERO */
+
+.main__sectionHero {
+    background: url(../img/rick-and-morty-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+}
+
+.sectionHero__overlay {
+    height: 100vh;
+    background-color: #00000034;
+}
+
+.sectionHero__container {
+    padding: 5rem 5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionHero__titleText {
+    color: var(--Color5);
+    letter-spacing: .2rem;
+    line-height: 6.5rem;
+}
+
+.sectionHero__descriptionText {
+    font-weight: bold;
+    letter-spacing: .3rem;
+    margin-top: 1rem;
+}
+
+.sectionHero__descriptionText span {
+    background-color: var(--Color6);
+    color: var(--Color4);
+    padding: 0rem 1rem;
+    border-radius: 1rem;
+}
+
+/* SECCIÓN PERSONAJES */
+
+.main__sectionCharacters {
+    min-height: 60rem;
+    background-color: var(--Color3);
+}
+
+#sectionCharacters__wrapper {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    max-width: 120.4rem;
+    height: 100%;
+}
+
+.sectionCharacters__searchBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.sectionCharacters__searchLabel {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin-top: 5rem;
+}
+
+.sectionCharacters__search {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sectionCharacters__search input {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    background-color: var(--Color2);
+    color: var(--Color1);
+    border: .2rem solid var(--Color6);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    transition: all .3s ease-in-out;
+}
+
+/* .sectionCharacters__search input:focus {
+    border: .2rem solid #d1b9ae;
+} */
+
+.sectionCharacters__search button {
+    width: 4.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--Color6);
+    border: none;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    transition: all .3s ease-in-out;
+}
+
+.sectionCharacters__search button:hover {
+    background-color: #d1b9ae;
+}
+
+.sectionCharacters__search a {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 1.2rem;
+    right: 5.5rem;
+    color: #a8a8a8;
+    display: none;
+}
+
+.sectionCharacters__searchInfo {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.sectionCharacters__container {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.sectionCharacters__box {
+    background-color: var(--Color2);
+    box-shadow: 0rem 1rem 1.3rem -.7rem #0000001e;
+    margin-top: 4rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.sectionCharacters__box:hover {
+    box-shadow: 0rem 2rem 2.3rem -.7rem #00000063;
+    transform: translateY(-.5rem);
+}
+
+.sectionCharacters__profilepic {
+    width: 25rem;
+    height: 25rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.sectionCharacters__name {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    letter-spacing: .1rem;
+}
+
+.sectionCharacters__parameter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.sectionCharacters__parameterTitle {
+    font-weight: bold;
+    letter-spacing: .1rem;
+    color: #b3b3b3;
+}
+
+.sectionCharacters__parameterText {
+    color: #888888;
+}
+
+.sectionCharacters__parameterText--alive {
+    color: #28fd02;
+}
+
+.sectionCharacters__parameterText--dead {
+    color: #fd0202;
+}
+
+.sectionCharacters__parameterText--unknown {
+    color: #585858;
+}
+
+
+
+
+.sectionCharacters__showMore {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+
+.sectionCharacters__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--Color6);
+    background-color: #00000000;
+    color: var(--Color6);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.sectionCharacters__button:hover {
+    background-color: var(--Color6);
+    color: #000000;
+}

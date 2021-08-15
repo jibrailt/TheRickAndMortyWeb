@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- NECESARIOS -->
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' media='screen' href='./src/css/index.css'>
+        <!-- CDN:Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+        <!-- CDN:RemixIcon -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- CDN:ScrollReveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!-- SEO -->
+        <meta name="robots" content="noindex, nofollow">
+        <title>The Rick and Morty</title>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header id="header">
+            <div id="header__wrapper">
+                <div class="header__logoContainer">
+                    <h2 class="header__logoText">
+                        <a class="header__logoLink" href="/">
+                            <i class="ri-remixicon-fill"></i>
+                            The Rick and Morty
+                        </a>
+                    </h2>
+                </div>
+                <div class="header__navContainer">
+                    <nav class="header__navBox">
+                        <a class="header__navItem" href="#">
+                            <i class="ri-user-line"></i> Personajes
+                        </a>
+                        <a class="header__navItem" href="#">
+                            <i class="ri-tv-line"></i> Episodios
+                        </a>
+                        <a class="header__navItem header__navItem--last" href="#">
+                            Contáctanos
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+        <main id="main">
+            <section class="main__sectionHero">
+                <div class="sectionHero__overlay">
+                    <div id="sectionHero__wrapper">
+                        <div class="sectionHero__container">
+                            <h1 class="sectionHero__titleText">
+                                TODOS LOS<br>PERSONAJES
+                            </h1>
+                            <p class="sectionHero__descriptionText">
+                                Actualmente hay <span id="totalCharacters"></span> personajes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main__sectionCharacters">
+                <div id="sectionCharacters__wrapper">
+                    <p class="sectionCharacters__searchLabel">¿Estás buscando algo?</p>
+                    <div class="sectionCharacters__searchBar">
+                        <div class="sectionCharacters__search">
+                            <input id="searchBarInput" type="text" placeholder="Busca un personaje..">
+                            <button id="searchBarButton"><i class="ri-search-line"></i></button>
+                            <a id="searchBarCancel"><i class="ri-close-fill"></i></a>
+                        </div>
+                    </div>
+                    <p class="sectionCharacters__searchInfo" id="searchBarInfo"></p>
+                    <div class="sectionCharacters__container" id="charactersContainer"></div>
+                    <div class="sectionCharacters__showMore" id="charactersShowMore"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer id="footer"></footer>
+
+        <script type="module" src="./src/js/index.js"></script>
+        <script src="./src/js/stickynav.js"></script>
+    </body>
+</html>
